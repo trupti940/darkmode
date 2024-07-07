@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a9097a6b72.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background: linear-gradient(#e7eefe, white,#e7eefe, white);
+            font-family: "Open Sans", sans-serif;
+        }
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: white;
+        }
+        div.container{
+                max-width: 1300px;
+                margin:auto;
+        }
+        nav>div.container{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0px;
+            border:none;
+            font-size:18px;
+        }
+        nav a{
+            text-decoration: none;
+            color:black;
+            margin-left:50px;
+        }
+        button{
+            padding:10px 20px;
+            border-radius: 10px;
+            border:none;
+            font-size: 18px;
+        }
+        .primary{
+            background-color: #b1e50e;
+        }
+        nav button{
+            margin-left: 50px;
+        }
+        main button{
+            background-color: black;
+            color:white;
+            padding:15px 35px;
+        }
+        main>div.container *{
+            margin-top: 50px;
+        }
+        main h1{
+            font-size: 75px;
+        }
+        main h1:nth-last-of-type(1){
+            color:#6b91fc;
+        }
+        main h3{
+            font-size: 30px;
+            width:75%;
+        }
+        article>div.container{
+            padding-top: 200px;
+            display:flex;
+            gap:10%;
+        }
+        article h3{
+            font-size: 25px;
+        }
+        article p{
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        section#matters>div.container{
+            padding:200px 0px;
+
+        }
+        section#streets>div.container{
+            padding:100px 0px;
+            margin-top: 0px;
+
+        }
+        .heading1{
+            font-size: 50px;
+            color:rgb(84 83 83);
+        }
+        section#matters>div.container>div{
+            display:flex;
+            margin-top: 50px;
+            gap:10%;
+        }
+        section#streets>div.container>div{
+            display:flex;
+            margin-top: 50px;
+            gap:10%;
+
+        }
+        section#matters p{
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        section#portfolio>div.container>div {
+            margin-top: 100px;    
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:5%;
+        }
+        section#portfolio>div.container>div>div{
+            background-color: white;
+            padding:25px;
+            border-radius: 15px;
+            height:300px;
+            justify-content: space-between;
+            display:flex;
+            flex-direction: column;
+        }
+        section#portfolio img{
+            width:120px;
+        }
+        section#portfolio p{
+            margin-top: 30px;
+        }
+        section#experts > div.container {
+            padding: 200px 0px;
+        }
+
+        section#experts > div.container > div {
+            display: flex;
+            margin-top: 50px;
+            gap: 10%;
+        }
+
+        section#experts img {
+            width: 200px;
+        }
+
+        section#experts h3 {
+            margin: 30px 0px;
+        }
+
+    
+        section#streets img{
+            width:200px;
+        }
+        
+        section#talk>div.container>div:first-child{
+            background-color: #1b1e2d;
+            width:80%;
+            margin:auto;
+            height:700px;
+            border-radius: 25px;
+            padding:70px;
+        }
+        section#talk{
+            color:white;
+        }
+        section#talk h1{
+            font-size: 45px;
+        }
+        div#contact{
+            display:flex;
+            gap:10%;
+        }
+        div#contact>div:first-child *{
+            margin-top: 50px;
+        } 
+        div#contact>div:nth-of-type(2){
+            width:60%;
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+            padding-top: 50px;
+        }
+        div#contact>div:nth-of-type(2) input{
+            width:100%;
+            border-radius:12px;
+            height:50px;
+            padding-left: 30px;
+        }
+        div#contact>div:nth-of-type(2) input::placeholder{
+    
+            color:grey;
+        }
+        div#contact>div:nth-of-type(2) textarea{
+            width:100%;
+            height:30%;
+            border-radius:12px;
+        }
+        footer{
+            margin-top: 0px;
+            background-color:#1b1e2d;
+            padding:50px;
+        }
+        footer>div.container>div:first-child{
+            display:flex;
+            /*justify-content: space-between;*/
+            padding-bottom: 60px;
+            color: white;
+            padding-top: 100px;
+        }
+       
+        footer>div.container>div:first-child>div:first-child *{
+            margin:50px;
+            color: white;
+        }
+
+        footer>div.container>div:first-child>div:first-child img{
+            margin-top: 0px;
+            padding-bottom: 0;
+            align-items: center;
+        }
+        section#media > div.container {
+            padding: 200px 0px;
+        }
+
+        section#media > div.container > div {
+            display: flex;
+            margin-top: 50px;
+            gap: 10%;
+        }
+
+        section#media img {
+            width: 500px;
+            border-radius: 20px;
+            height:300px;
+        }
+
+        section#media h3 {
+            margin: 30px 0px;
+        }
+
+        .sub-footer{
+            display: flex;
+            gap : 60px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .sub-footer>div>h1{
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            text-align: start;
+        }
+        .sub-footer>div>p{
+            color: gray;
+            padding: 5px;
+        }
+        .company{
+            margin-left: 250px;
+        }
+        .company>div>h1{
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            text-align: start;
+        }
+        .company>div>p{
+            color: gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="https://coinswitch.co/_next/static/media/logo.01525825.svg" alt="logo">
+            <div>
+                <a href="">Products v</a>
+                <a href="">Blogs</a>
+                <a href="">Ventures</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <button class="primary">Login to Pro</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <img src="https://coinswitch.co/_next/static/media/logo.01525825.svg">
+            <h1>Your Innovation</h1>
+            <h1>Our Fuel</h1>
+            <h3>CoinSwitch Ventures invests in the most promising Web3 and blockchain projects in India. Does that sound like you?</h3>
+            <button>Apply Now</button>
+        </div>
+    </main>
+    <article>
+        <div class="container">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/blockchain.webp">
+            </div>
+            <div>
+                <h3>We believe that Web3 and blockchain are the foundations of the new digital, decentralized economy.</h3>
+                <p>To this end, we're partnering with startups that are advancing the future of Blockchain technology. We provide early stage founders with the capital, network connections and most importantly, 
+                    the advice they need to transform the Web3 landscape in India.</p>
+            </div>
+        </div>
+    </article>
+    <section id="matters">
+        <div class="container">
+            <h1 class="heading1">Why it Matters?</h1>
+            <div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/partnership.svg" >
+                    <p>Partnership with India’s 
+                        largest wealth tech
+                        destination</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/network.svg" >
+                        <p>Access to a network of 70+
+                            global venture capital
+                            partners</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/capital.svg" >
+                        <p>Capital infusion up to
+                            $250,000</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mentorship.svg" >
+                        <p>Mentorship from
+                            in-house experts</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="heading1">Our Selected Portfolio</h1>
+            <div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/pyor.svg" alt="">
+                    <div><h3>PYOR</h3>
+                    <p>Blockchain data & research</p></div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/silencelab.svg" alt="">
+                    <div><h3>Silence labs</h3>
+                    <p>Web wallet tech 
+                        provider</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/shield.svg" alt="">
+                    <div><h3>Shield</h3>
+                    <p>Web3 community
+                        management tools</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/polytrade.svg" alt="">
+                    <div><h3>PolyTrade</h3>
+                    <p>DeFi liquidity for Polytrade 
+                        finance</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/airstack.svg" alt="">
+                    <div><h3>AirStack</h3>
+                    <p>Blockchain data anlytics</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/playzap.svg" alt="">
+                    <div><h3>PlayZap</h3>
+                    <p>Skill-to-earn Web3 gaming platform</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/BlockScholes.svg" alt="">
+                    <div><h3>BlockScholes</h3>
+                    <p>Institutional-grade crypto analytics</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/stan.svg" alt="">
+                    <div><h3>Stan</h3>
+                    <p>E-Sports Fan Engagement Paltform</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/WallChain.svg" alt="">
+                    <div><h3>Wallchain</h3>
+                    <p>Most used MEV Rebate solution for EVM chains</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/nGrave.svg" alt="">
+                    <div><h3>NGrave</h3>
+                    <p>Safest Crypto Cold Wallet</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/griffy.svg" alt="">
+                    <div><h3>Griffy</h3>
+                    <p>Nasdaq for Opinion Trading</p>
+                </div>
+                </div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/bitscrunch.svg" alt="">
+                    <div><h3>BitsCrunch</h3>
+                    <p>NFT forensics tool</p>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="experts">
+        <div class="container">
+            <h1 class="heading1">Our Team of Experts</h1>
+            <div>
+                <div>
+                    <img src="https://coinswitch.co/_next/static/media/ashish_new.6b6406a1.png" >
+                    <h3>Ashish Singhal</h3>
+                    <p>Co-founder & Group CEO, PeepalCo Group<br/><br/>
+
+                        A Builder focused on simplicity and user 
+                        satisfaction, Ashish is also working toward a 
+                        blockchain-based technological shift in India 
+                        in his role as the Co-Chair of the BACC 
+                        (Blockchain and Crypto Assets Council).</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/parth.webp" >
+                        <h3>Parth Chaturvedi</h3>
+                        <p>Investment Lead, CoinSwitch<br/><br/>
+
+                            An investment analyst turned blockchain 
+                            evangelist, Parth is leading efforts to 
+                            strengthen the Web3 and Crypto ecosystem 
+                            in India</p>
+                    </div>
+                    <div>
+                        <img src="https://coinswitch.co/_next/static/media/vimal_new.8e9d6a5d.png" >
+                        <h3>Sagar Vimal Tiwari</h3>
+                        <p>Co-founder & Group COO, PeepalCo Group<br/><br/>
+
+                            An alumnus of Jaypee Institute of 
+                            Information Technology and a product builder 
+                            at heart, Vimal is focused on implementing 
+                            strategies to meet CoinSwitch's 
+                            organizational objectives.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="streets">
+        <div class="container">
+            <h1 class="heading1">Word on Streets</h1>
+            <div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg" >
+                
+                    <p>CoinSwitch Ventures 
+                        has been a great value add in terms of 
+                        how to build a global protocol 
+                        that is compliant, user friendly, 
+                        and forward looking.</p><br/><br/>
+                    <p>Piyush Gupta, PolyTrade</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg" >
+                        
+                        <p>Our CoinSwitch partners first 
+                            inspired our team to build 
+                            detection systems for malicious 
+                            wallet history, which is now our 
+                            most popular API module by 
+                            far.</p><br/><br/>
+                            <p>Emmanuel Udotong, Shield</p>
+                            
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg" >
+                        
+                        <p>Coinswitch has been a valuable 
+                            partner for Airstack, helping 
+                            with numerous investor 
+                            introductions and business 
+                            development.</p><br/><br/>
+                            <p>Jason Goldberg, Airstack</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg" >
+                
+                        <p>CoinSwitch Ventures, though a 
+                            new venture arm, there is a lot 
+                            of support from validating the 
+                            tech to making connections. 
+                            Since they are one of the 
+                            market leaders in india, we get 
+                            a lot of market share from the 
+                            country</p><br/><br/>
+                            <p>Vijay, BitsCrunch</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="talk">
+        <div class="container">
+            <div id="contact">
+                <div style="width:60%;">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/letstalk.svg">
+                    <h1>Let's Talk</h1>
+                    <h3>If you are, or know of budding Web3 projects, share your details and we'll get in touch!</h3>
+                    <h3>FOLLOW US ON</h3>
+                    <div style="display:flex;gap:20px;margin-top: 0px;">
+                        <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-telegram fa-xl" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div>
+                    <div><input type="text" placeholder="Tell us your name"></div>
+                    <div><input type="text" placeholder="Your email"></div>
+                    <div><input type="text" placeholder="Mobile number"></div>
+
+                    <textarea name="" id=""></textarea>
+                    <button class="primary" style="width:100%">Apply now</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="media">
+        <div class="container">
+            <h1 class="heading1">Media</h1>
+            <div>
+                <div>
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage1.png" >
+                    <h3>Web3 protocol Polytrade raises $3.8M to improve global trade</h3>
+                    <p>30 March 2023</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage2.png" >
+                        <h3>Crypto analytics firm Block Scholes raises $3.3 million to boost growth</h3>
+                    <p>10 November 2023</p>
+                    </div>
+                    <div>
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage3.png" >
+                        <h3>PYOR raises $4mn in seed funding led by Castle Island Ventures</h3>
+                        <p>18 May 2023</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div>
+            <div>
+                <div style="background-color:white;padding:0px;border-radius:10px ;width: 350px; height: 20"><img src="https://coinswitch.co/_next/static/media/logo.01525825.svg" alt="logo"></div>
+                <p>Follow us on</p>
+                <div style="display:flex;margin-top: 0px;">
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-telegram fa-xl" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i>
+                </div>
+            </div>
+                <div>
+                
+                    <p>We are available on</p> 
+                    <p>most familiar channels</p>
+                
+              
+                    <p>Email Us</p>
+                    <p>support @coinswitch.co</p>
+                
+              
+                    <p>Raise a Ticket </p>
+                    <p>Click here</p>
+               
+                </div>
+            
+            </div>
+            <hr />
+            <div>
+                <div class = "sub-footer">
+                    <div>
+                        <h1>Products</h1>
+                        <p>Crypto Rupee Index (CRE8)<br/</p>
+                        <p>Systematic Investment Plan</p>
+                    </div>
+                    <div>
+                        <h1>Buy Crypto<br/></h1>
+                        <p>Buy Bitcoin<br/></p>
+                        <p>Buy Ethereum<br/></p>
+                        <p>Buy Doge coin<br/></p>
+                        <p>Buy Shiba Inu</p>
+                    </div>
+                    <div>
+                        <h1>Policies</h1>
+                        <p>T&C<br/</p>
+                        <p>AML Policy<br/></p>
+                        <p>Privacy Policy<br/></p>
+                        <p>Trading Policy<br/></p>
+                        <p>Cookie Policy</p>
+                    </div>
+                    <div class = "company">
+                    <div>
+                        <h1>Company</h1>
+                        <p>About us<br/</p>
+                        <p>Venture<br/></p>
+                        <p>Career<br/></p>
+                        <p>Press</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <hr />
+        </div>
+    </footer>
+</body>
+</html>
